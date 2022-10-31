@@ -20,7 +20,6 @@ jobs:
       - run: mvn -B clean generate-resources
 
       - name: Deploy
-        uses: peaceiris/actions-gh-pages@v3
+        uses: JamesIves/github-pages-deploy-action@v4
         env:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/website
+          folder: target/website
